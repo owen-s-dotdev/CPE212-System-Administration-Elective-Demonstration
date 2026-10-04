@@ -231,7 +231,7 @@ const MEMBERS = [
 
     bio: "Prospect DevOps Engineer with a strong foundation in Linux system administration, networking, and automation.",
 
-    photo: "",
+    photo: "files/member-3/2x2_DavidOwenSantiago.png",
 
     nav: "",
 
@@ -247,6 +247,8 @@ const MEMBERS = [
       "Shell Scripting",
       "Ansible",
       "Docker",
+      "Python",
+      "C++",
     ],
 
     items: placeholderItems(3)
