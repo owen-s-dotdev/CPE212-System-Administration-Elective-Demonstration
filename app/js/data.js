@@ -225,26 +225,28 @@ const MEMBERS = [
   {
     id: "member-3",
 
-    name: "Member Three",
+    name: "David Owen A. Santiago",
 
-    role: "Member",
+    role: "Developer",
 
-    bio: "TODO: One or two sentences about this member.",
+    bio: "Prospect DevOps Engineer with a strong foundation in Linux system administration, networking, and automation.",
 
     photo: "",
 
     nav: "",
 
-    accent: "#ff7a59",
+    accent: "#FDDC5C",
 
     links: {
-      github: "",
-      email: ""
+      github: "https://github.com/owen-s-dotdev/CPE212-Santiago.git",
+      email: "owensantiago115@gmail.com"
     },
 
     skills: [
-      "CentOS",
-      "SELinux"
+      "Ubuntu",
+      "Shell Scripting",
+      "Ansible",
+      "Docker",
     ],
 
     items: placeholderItems(3)
