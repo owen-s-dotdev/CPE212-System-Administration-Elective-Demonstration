@@ -194,7 +194,7 @@ const MEMBERS = [
 
     name: "Irick Marvin Galan",
 
-    role: "Member",
+    role: "Developer",
 
     bio: "Future Career Path towards DevOps / Cloud Engineer, Embedded Systems as Hobby",
 
