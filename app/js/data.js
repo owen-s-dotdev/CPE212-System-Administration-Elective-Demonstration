@@ -192,26 +192,28 @@ const MEMBERS = [
   {
     id: "member-2",
 
-    name: "Member Two",
+    name: "Irick Marvin Galan",
 
-    role: "Member",
+    role: "Developer",
 
-    bio: "TODO: One or two sentences about this member.",
+    bio: "Future Career Path towards DevOps / Cloud Engineer, Embedded Systems as Hobby",
 
-    photo: "",
+    photo: "files/member-2/Galan_2x2_Formal.png",
 
     nav: "",
 
     accent: "#22c3a6",
 
     links: {
-      github: "",
-      email: ""
+      github: "https://github.com/IrickMarvinGalan/CPE212_Galan/tree/home",
+      email: "qimagalan@tip.edu.ph | irickmarvingalan.1321@gmail.com"
     },
 
     skills: [
-      "Networking",
-      "Bash"
+      "Cisco Networking",
+      "Linux CLI",
+      "Bash Scripting",
+      "Arduino C++"
     ],
 
     items: placeholderItems(2)
