@@ -28,7 +28,7 @@
  *  HOA STRUCTURE:
  *
  *  PRELIM
- *    HOA 1-3  -> PDF only
+ *    HOA 1-3  -> PDF onlyf
  *    HOA 4-5  -> PDF + YAML
  *
  *  MIDTERM
@@ -157,28 +157,27 @@ const MEMBERS = [
   {
     id: "member-1",
 
-    name: "Jimlord Quejado",
+    name: "Mark David Loterte",
 
-    role: "Team Lead",
+    role: "Developer",
 
-    bio: "add your bionote here",
+    bio: "Computer Engineering student with a focus on System Administration and Computer Networks.",
 
     photo: "files/member-1/photo.jpg",
 
-    nav: "Jim",
+    nav: "",
 
     accent: "#7c5cff",
 
     links: {
-      github: "https://github.com/JimQuejado/SysAd2-FinalProjectJimQuejado",
-      email: "jimquejado@gmail.com"
+      github: "https://github.com/qmdmlot",
+      email: "lotertemd@gmail.com"
     },
 
     skills: [
-      "Linux",
-      "Ansible",
-      "Docker",
-      "C++",
+      "Computer Networks",
+      "Linux System Administration",
+      "Bash Scripting",
     ],
 
     items: placeholderItems(1)
@@ -249,8 +248,6 @@ const MEMBERS = [
       "Shell Scripting",
       "Ansible",
       "Docker",
-      "Python",
-      "C++",
     ],
 
     items: placeholderItems(3)
