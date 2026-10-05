@@ -26,9 +26,9 @@
         labels:
           project: sysad2-portfolio
           deployed_by: ansible
-        loop: "{{ portfolio_containers }}"
-        loop_control:
-          label: "{{ item.name }} -> port {{ item.host_port }}"
+      loop: "{{ portfolio_containers }}"
+      loop_control:
+        label: "{{ item.name }} -> port {{ item.host_port }}"
 
     - name: Gather the state of system services (used to detect firewalld)
       ansible.builtin.service_facts:
