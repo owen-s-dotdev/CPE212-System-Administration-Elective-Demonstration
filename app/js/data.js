@@ -261,26 +261,29 @@ const MEMBERS = [
   {
     id: "member-4",
 
-    name: "Member Four",
+    name: "Christopher Fegalan",
 
-    role: "Member",
+    role: "Developer",
 
-    bio: "TODO: One or two sentences about this member.",
+    bio: "Cloud Architect & Network Engineer in the making",
 
-    photo: "",
+    photo: "files/member-4/2x2_Fegalan.png",
 
     nav: "",
 
     accent: "#3ba7ff",
 
     links: {
-      github: "",
-      email: ""
+      github: "https://github.com/christopherfegalan/CPE212_fegalan",
+      email: "pherfegalan@gmail.com"
     },
 
     skills: [
       "Ubuntu",
-      "Nginx"
+      "Cisco Networking",
+      "Arduino Scripting",
+      "Bash Scripting"
+
     ],
 
     items: placeholderItems(4)
