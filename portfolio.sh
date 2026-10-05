@@ -10,7 +10,7 @@ sudo apt install -y ansible git tree
 ansible-galaxy collection install -r ./ansible/requirements.yml
 
 #Build Image for all remote hosts
-ansible-playbook build_image.yml -K
+ansible-playbook ./ansible/build_image.yml -K
 
 #Run containers for all remote hosts
-ansible-playbook run_containers.yml -K
+ansible-playbook ./ansible/run_containers.yml -K
