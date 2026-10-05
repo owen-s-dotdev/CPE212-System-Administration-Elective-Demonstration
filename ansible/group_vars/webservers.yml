@@ -13,8 +13,6 @@ portfolio_containers:
   - name: portfolio-web
     host_port: 8080
 
-
-
 # Users that may run `docker` without sudo (the SSH user by default).
 docker_users:
   - "{{ ansible_user }}"
