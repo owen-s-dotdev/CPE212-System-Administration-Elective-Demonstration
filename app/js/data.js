@@ -195,7 +195,7 @@ const MEMBERS = [
 
     role: "Developer",
 
-    bio: "Future Career Path towards DevOps / Cloud Engineer, Embedded Systems as Hobby",
+    bio: "Skills in Linux Scripting, Ansible, and Cisco Networking buildin to a future career towards DevOps / Cloud Engineer",
 
     photo: "files/member-2/Galan_2x2_Formal.png",
 
@@ -209,10 +209,9 @@ const MEMBERS = [
     },
 
     skills: [
-      "Cisco Networking",
+      "Cisco Networking I and II",
       "Linux CLI",
       "Bash Scripting",
-      "Arduino C++"
     ],
 
     items: placeholderItems(2)
