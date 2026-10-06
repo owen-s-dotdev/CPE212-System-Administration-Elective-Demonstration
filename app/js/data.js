@@ -266,7 +266,7 @@ const MEMBERS = [
 
     bio: "Cloud Architect & Network Engineer in the making",
 
-    photo: "files/member-4/2x2_Fegalan.png",
+    photo: "files/member-4/2x2_fegalan.png",
 
     nav: "",
 
