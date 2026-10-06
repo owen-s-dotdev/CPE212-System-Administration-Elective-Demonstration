@@ -264,7 +264,7 @@ const MEMBERS = [
 
     role: "Developer",
 
-    bio: "Cloud Architect & Network Engineer in the making",
+    bio: "Computer Engineering student aspiring to become a Cloud Engineer with a strong foundation in Linux system administration, networking, and automation.",
 
     photo: "files/member-4/2x2_fegalan.png",
 
