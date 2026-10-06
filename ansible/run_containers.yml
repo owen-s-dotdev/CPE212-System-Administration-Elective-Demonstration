@@ -29,6 +29,10 @@
       loop: "{{ portfolio_containers }}"
       loop_control:
         label: "{{ item.name }} -> port {{ item.host_port }}"
+      register: start_result
+      retries: 4
+      delay: 10
+      until: start_result is succeeded
 
     - name: Gather the state of system services (used to detect firewalld)
       ansible.builtin.service_facts:
