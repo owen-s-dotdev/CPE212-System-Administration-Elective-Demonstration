@@ -158,7 +158,7 @@ const MEMBERS = [
   {
     id: "member-1",
 
-    name: "Mark David Loterte",
+    name: "Mark",
 
     role: "Developer",
 
@@ -192,7 +192,7 @@ const MEMBERS = [
   {
     id: "member-2",
 
-    name: "Irick Marvin Galan",
+    name: "Marvin",
 
     role: "Developer",
 
@@ -261,7 +261,7 @@ const MEMBERS = [
   {
     id: "member-4",
 
-    name: "Christopher Fegalan",
+    name: "Fegalan",
 
     role: "Developer",
 
