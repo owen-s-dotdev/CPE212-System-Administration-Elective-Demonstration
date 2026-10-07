@@ -1,5 +1,7 @@
 #!/bin/bash
-#HELP: use *bash portfolio.sh --skip-install* command to skip lengthy installation process
+#	HELP: use *bash portfolio.sh --skip-install* command to skip 
+#	lengthy installation process and password setup
+#	Use it when the script was already run at least once
 
 if  [ -z "$1" ]; then
 	#Section that sets up the ansible
@@ -12,7 +14,8 @@ if  [ -z "$1" ]; then
 	ansible-galaxy collection install -r requirements.yml
 fi
 
-if [ "$1" = "--create-vault" ]; then
+#Setup the ansible-vault
+if [ -z "$1" ] ; then
 	echo "pass123" > vaultpass.txt
 	chmod 600 vaultpass.txt
 	ansible-playbook create_vault.yaml
