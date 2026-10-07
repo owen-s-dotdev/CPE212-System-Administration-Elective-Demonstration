@@ -6,8 +6,12 @@ document.documentElement.style.setProperty("--accent", m.accent);
 const app = document.getElementById("app");
 
 function workCard(kind, title, item) {
+  const image = item.image
+    ? el("img", { class: "work-img", src: item.image, alt: title, loading: "lazy" })
+    : null;
+  if (image) image.addEventListener("error", () => image.remove(), { once: true });
   return el("article", { class: "work-card" },
-    item.image ? el("img", { class: "work-img", src: item.image, alt: title, loading: "lazy" }) : null,
+    image,
     el("div", { class: "work-body" },
       el("div", { class: "work-meta" }, el("span", { class: "tag" }, kind), item.date ? el("span", { class: "date" }, item.date) : null),
       el("h3", {}, title),
