@@ -87,10 +87,10 @@ const placeholderItems = (n) => ({
   },
 
   prelimExam: {
-    date: "TODO",
-    summary: `TODO: Member ${n}'s Prelim exam. Coverage, score, or output.`,
+    date: "August 13, 2026",
+    summary: `Basic Ansible setup and configuration.`,
     image: "",
-    file: ""
+    file: "files/prelim_skills_exam.pdf"
   },
 
 
@@ -104,10 +104,10 @@ const placeholderItems = (n) => ({
   },
 
   midtermExam: {
-    date: "TODO",
-    summary: `TODO: Member ${n}'s Midterm exam. Coverage, score, or output.`,
+    date: "September 24, 2026",
+    summary: `Applying Ansible concepts, roles, and playbooks to install and configure Prometheus`,
     image: "",
-    file: ""
+    file: "files/midterm_skills_exam.pdf"
   },
 
 
@@ -121,8 +121,8 @@ const placeholderItems = (n) => ({
   },
 
   finalExam: {
-    date: "TODO",
-    summary: `TODO: Member ${n}'s Final exam. Coverage, score, or output.`,
+    date: "October 8, 2026",
+    summary: `Applying Ansible automation to deploy a Dockerized web page.`,
     image: "",
     file: ""
   },
