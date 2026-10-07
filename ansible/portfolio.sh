@@ -20,8 +20,8 @@ fi
 
 if [ -z "$1" ] || [ "$1" = "--skip-install" ]; then
 	#Run the docker image builder
-	ansible-playbook build_image.yml -K
+	ansible-playbook build_image.yml --vault-password-file vaultpass.txt
 
 	#Run containers for all remote hosts
-	ansible-playbook run_containers.yml -K
+	ansible-playbook run_containers.yml --vault-password-file vaultpass.txt
 fi

@@ -2,10 +2,12 @@
 # ansible-playbook run_containers.yml​
 - name: Run the portfolio containers on CentOS and Ubuntu
   hosts: webservers
-  become: true
+  vars_files:
+    - vault.yml
 
   pre_tasks:
     - name: Make sure the image exists (run build_image.yml first)
+      become: true
       community.docker.docker_image_info:
         name: "{{ image_name }}:{{ image_tag }}"
       register: image_check
@@ -13,6 +15,7 @@
 
   tasks:
     - name: Start the portfolio containers
+      become: true
       community.docker.docker_container:
         name: "{{ item.name }}"
         image: "{{ image_name }}:{{ image_tag }}"
@@ -35,9 +38,11 @@
       until: start_result is succeeded
 
     - name: Gather the state of system services (used to detect firewalld)
+      become: true
       ansible.builtin.service_facts:
 
     - name: Open the ports in firewalld (CentOS, only if firewalld is running)
+      become: true
       ansible.posix.firewalld:
         port: "{{ item.host_port }}/tcp"
         permanent: true
@@ -51,6 +56,7 @@
           - ansible_facts.services['firewalld.service'].state | default('') == "running"
 
     - name: Check whether ufw is active (Ubuntu)
+      become: true
       ansible.builtin.command: ufw status
       register: ufw_status
       changed_when: false
@@ -58,6 +64,7 @@
       when: ansible_os_family == "Debian"
 
     - name: Open the ports in ufw (Ubuntu, only if ufw is active)
+      become: true
       community.general.ufw:
         rule: allow
         port: "{{ item.host_port }}"
@@ -70,6 +77,7 @@
         - "'Status: active' in ufw_status.stdout | default('')"
 
     - name: Wait until each container answers its health check
+      become: true
       ansible.builtin.uri:
         url: "http://127.0.0.1:{{ item.host_port }}/healthz"
         return_content: true
@@ -82,6 +90,7 @@
         label: "{{ item.name }}"
 
     - name: List the running portfolio containers
+      become: true
       community.docker.docker_host_info:
         containers: true
         containers_filters:
@@ -89,6 +98,7 @@
       register: host_info
 
     - name: Show where to open the site
+      become: true
       ansible.builtin.debug:
         msg: >-
           {{ inventory_hostname }}: {{ host_info.containers | length }} container(s)
