@@ -31,14 +31,14 @@ The repository is .
 
 ```text
 app/
-├── index.html              home page (4 member cards)
+├── index.html             
 ├── member-1.html … member-4.html
-├── css/style.css           the design
+├── css/style.css         
 ├── js/
-│   ├── data.js             EDIT: names, HOA titles and summaries, exams, reflection
-│   ├── common.js           shared code (menu, footer, file checks)
-│   ├── home.js             builds the home page
-│   └── member.js           builds a member page
+│   ├── data.js             
+│   ├── common.js           
+│   ├── home.js             
+│   └── member.js           
 └── files/
     ├── member-1/
     │   ├── prelim/
