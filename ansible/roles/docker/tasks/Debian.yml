@@ -1,5 +1,6 @@
 # Ubuntu / Debian family: apt + Docker's Ubuntu repository signed with its GPG key.
 - name: Remove unofficial Docker packages that conflict (Ubuntu)
+  become: true
   ansible.builtin.apt:
     name:
       - docker.io
@@ -10,6 +11,7 @@
     state: absent
 
 - name: Install prerequisites and Python requests (Ubuntu)
+  become: true
   ansible.builtin.apt:
     name:
       - ca-certificates
@@ -20,18 +22,21 @@
     cache_valid_time: 3600
 
 - name: Create the apt keyrings directory (Ubuntu)
+  become: true
   ansible.builtin.file:
     path: /etc/apt/keyrings
     state: directory
     mode: "0755"
 
 - name: Download Docker's GPG key (Ubuntu)
+  become: true
   ansible.builtin.get_url:
     url: https://download.docker.com/linux/ubuntu/gpg
     dest: /etc/apt/keyrings/docker.asc
     mode: "0644"
 
 - name: Add the Docker CE repository (Ubuntu)
+  become: true
   ansible.builtin.apt_repository:
     repo: >-
       deb [arch={{ 'arm64' if ansible_architecture == 'aarch64' else 'amd64' }}
@@ -42,6 +47,7 @@
     state: present
 
 - name: Install Docker Engine (Ubuntu)
+  become: true
   ansible.builtin.apt:
     name: "{{ docker_packages }}"
     state: present

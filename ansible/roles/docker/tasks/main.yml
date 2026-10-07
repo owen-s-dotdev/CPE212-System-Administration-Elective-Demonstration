@@ -2,15 +2,18 @@
 # and repositories, so the OS-specific steps live in their own files and the
 # right one is picked from the facts Ansible gathered (ansible_os_family).
 - name: Install Docker using the steps for this OS family
+  become: true
   ansible.builtin.include_tasks: "{{ ansible_os_family }}.yml"
 
 - name: Start Docker now and on every boot
+  become: true
   ansible.builtin.systemd_service:
     name: docker
     state: started
     enabled: true
 
 - name: Let the SSH user run docker without sudo
+  become: true
   ansible.builtin.user:
     name: "{{ item }}"
     groups: docker
@@ -18,6 +21,7 @@
   loop: "{{ docker_users }}"
 
 - name: Show the installed Docker version
+  become: true
   ansible.builtin.command: docker version --format '{{ "{{" }} .Server.Version {{ "}}" }}'
   register: docker_version
   changed_when: false
