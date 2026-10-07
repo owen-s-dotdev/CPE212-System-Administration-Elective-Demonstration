@@ -51,22 +51,22 @@ const GROUP = {
 
 const prelimActivities = (n) => [1, 2, 3, 4, 5].map(i => ({
   title: `Hands-on Activity ${i}`,
-  date: "TODO",
-  summary: `TODO: What Member ${n} did in HOA ${i}.`,
+  date: "July 16, 2026 - August 26, 2026",
+  summary: `Basic setup, SSH, and Ansible introduction.`,
   pdf: `files/member-${n}/prelim/hoa-${i}.pdf`
 }));
 
 const midtermActivities = (n) => [6, 7, 8, 9, 10].map(i => ({
   title: `Hands-on Activity ${i}`,
-  date: "TODO",
-  summary: `TODO: What Member ${n} did in HOA ${i}.`,
+  date: "September 1, 2026 - October 6, 2026",
+  summary: `Ansible playbooks, roles, and advanced configuration management.`,
   pdf: `files/member-${n}/midterm/hoa-${i}.pdf`
 }));
 
 const finalsActivities = (n) => [11, 12, 13, 14, 15].map(i => ({
   title: `Hands-on Activity ${i}`,
-  date: "TODO",
-  summary: `TODO: What Member ${n} did in HOA ${i}.`,
+  date: "October 8, 2026 - December 2026",
+  summary: `Docker, containerization, and deployment`,
   pdf: `files/member-${n}/finals/hoa-${i}.pdf`
 }));
 
@@ -133,12 +133,13 @@ const placeholderItems = (n) => ({
   // ----------------------------------------------------------
 
   reflection: {
-    summary: `TODO: Member ${n}'s reflection on the whole course. What was hardest, what clicked, and how you will use it.`,
+    summary: `My reflection on the whole course. What was the hardest, what clicked, and how I will use it in the future`,
 
     learnings: [
-      "TODO: Learning one",
-      "TODO: Learning two",
-      "TODO: Learning three"
+      "SSH and Ansible are essential tools for automating server management and configuration.",
+      "Automation is a powerful tool for system administration and can save time and reduce errors.",
+      "Containers and virtualization are important concepts for modern software development and deployment.",
+      "These skills, combined with scripting and networking knowledge, will be valuable in my future career as a DevOps or System Administration Engineer.",
     ]
   }
 });
