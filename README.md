@@ -1,4 +1,4 @@
-# ⚙️ CPE212 - Portfolio (template)
+# ⚙️ CPE212 - Group Portfolio
 
 <p align="center">
   <strong>Automating Server Management</strong><br>
@@ -52,9 +52,6 @@ app/
     │   │   ├── …
     │   │   └── hoa-10/  hoa-10.pdf 
     │   └── finals/
-    │       ├── hoa-11/  hoa-11.pdf 
-    │       ├── …
-    │       └── hoa-15/  hoa-15.pdf 
     ├── member-2/   (same layout)
     ├── member-3/   (same layout)
     └── member-4/   (same layout)
