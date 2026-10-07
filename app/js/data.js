@@ -44,7 +44,7 @@ const GROUP = {
   name: "Group Portfolio",
   course: "Automating Server Management",
   section: "CPE212-S2",
-  tagline: "Gitmaxxing to keep the systems running"
+  tagline: "ADD YOUR TAGLINE HERE"
 };
 
 
