@@ -226,7 +226,7 @@ const MEMBERS = [
   {
     id: "member-3",
 
-    name: "David Owen A. Santiago",
+    name: "Owen",
 
     role: "Developer",
 
