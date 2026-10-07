@@ -41,7 +41,7 @@
  */
 
 const GROUP = {
-  name: "Group Portfolio",
+  name: "Systemctl Automata",
   course: "Automating Server Management",
   section: "CPE212-S2",
   tagline: "ADD YOUR TAGLINE HERE"
