@@ -12,6 +12,12 @@ if  [ -z "$1" ]; then
 	ansible-galaxy collection install -r requirements.yml
 fi
 
+if [ "$1" = "--create-vault" ]; then
+	echo "pass123" > vaultpass.txt
+	chmod 600 vaultpass.txt
+	ansible-playbook create_vault.yaml
+fi
+
 if [ -z "$1" ] || [ "$1" = "--skip-install" ]; then
 	#Run the docker image builder
 	ansible-playbook build_image.yml -K

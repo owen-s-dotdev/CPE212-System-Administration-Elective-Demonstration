@@ -1,0 +1,14 @@
+---
+
+- hosts: localhost
+  tasks:
+
+    - name: Create vars file
+      ansible.builtin.copy:
+        dest: vault.yml
+        content: |
+          ansible_become_password: qimagalan
+
+    - name: Encrypt the file with vault
+      ansible.builtin.command:
+        cmd: ansible-vault encrypt vault.yml --encrypt-vault-id user
